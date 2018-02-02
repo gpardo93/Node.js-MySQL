@@ -1,7 +1,7 @@
 
 CREATE DATABASE bamazon;
 USE bamazon;
-CREATE TABLE products (ItemID int AUTO_INCREMENT, product_name varchar(50) NOT NULL, department_name varchar(50) NOT NULL, price varchar(30) NOT NULL, stock_quantity int NOT NULL, PRIMARY KEY(ItemID) );
+CREATE TABLE products (item_id int AUTO_INCREMENT, product_name varchar(50) NOT NULL, department_name varchar(50) NOT NULL, price varchar(30) NOT NULL, stock_quantity int NOT NULL, PRIMARY KEY(ItemID) );
 
 use bamazon;
 INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ("Apple Watch", "Electronics & Computers", 329.00, 30);
