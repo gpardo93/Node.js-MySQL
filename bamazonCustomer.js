@@ -5,7 +5,7 @@ var prompt = require("prompt");
 //  mysql connection
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: 8889,
   
     // Your username
     user: "root",
@@ -22,17 +22,17 @@ connection.connect(function(err){
     return;
     }
     console.log('Congrats, you connected');
-
+//making changes
     var schema = {
         properties: {
             ID: {
             message: "Enter the ID of the product you would like to buy.",
-            pattern: /^[0-9][0-9]$|^[0-9]$/,
+            pattern: /^[0-9]$|^[0-9]$/,
             required: true
             },
             howMany: {
             message: "Enter how many you would like to buy.",
-            pattern: /^[0-9][0-9]$|^[0-9][0-9][0-9]$/,
+            pattern: /^[0-9]$|^[0-9][0-9][0-9]$/,
             required: true
             }
         }
@@ -85,14 +85,14 @@ var beginApp = function(){
             if (err){
                 console.log(err)
             }
-          
+           console.log(result);
             var userChoiceID = parseInt(result.ID);
             var userChoiceHowMany = parseInt(result.howMany);
             
 
             // Function to check the inventory of an item
             var checkInventory = function(){
-                connection.query('SELECT * FROM Products WHERE item_id =' + userChoiceID, function(err, result) {
+                connection.query('SELECT * FROM products WHERE item_id =' + userChoiceID, function(err, result) {
                     if (err) throw err;
              
 
