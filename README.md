@@ -37,4 +37,4 @@
 - Once the update goes through, it will show the customer the total cost of their purchase.
 
 
- ![burger gif](/burger.gif)
+ ![bamazon gif](/bamazon.gif)
