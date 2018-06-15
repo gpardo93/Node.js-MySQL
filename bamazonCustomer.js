@@ -79,7 +79,7 @@ var beginApp = function(){
     // Function to get the user selection
     var userSelectID = function(){
         prompt.start();
-        console.log("Please enter the ID of the product you would like to buy.");
+        console.log("Please enter the ID of the product you would like to buy starting with a 0 ex.01");
 
         prompt.get(schema, function (err, result) {
             if (err){
