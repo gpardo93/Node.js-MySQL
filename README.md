@@ -35,3 +35,6 @@
 
 - This means updating the SQL database to reflect the remaining quantity.
 - Once the update goes through, it will show the customer the total cost of their purchase.
+
+
+ ![burger gif](/burger.gif)
