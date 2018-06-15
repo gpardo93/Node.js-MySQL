@@ -26,13 +26,13 @@ connection.connect(function(err){
     var schema = {
         properties: {
             ID: {
-            message: "Enter the ID of the product you would like to buy.",
-            pattern: /^[0-9]$|^[0-9]$/,
+            message: "Enter the ID of the product you would like to buy starting with 0 ex. 01",
+            pattern: /^[0-9][0-9]$|^[0-9]$/,
             required: true
             },
             howMany: {
-            message: "Enter how many you would like to buy.",
-            pattern: /^[0-9]$|^[0-9][0-9][0-9]$/,
+            message: "Enter how many you would like to buy starting with 0 ex. 01",
+            pattern: /^[0-9][0-9]$|^[0-9][0-9][0-9]$/,
             required: true
             }
         }
